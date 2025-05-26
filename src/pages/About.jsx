@@ -4,15 +4,18 @@ function About() {
   return (
     <div className="page">
       <h1>About Me</h1>
-      <p>
-        I’m Garv Pundir, a builder, thinker, and collaborator. At UW–Madison, I’ve worked on everything from grading AI models to predicting stock prices and creating IoT interfaces — all with a focus on impact.
-      </p>
-      <p>
-        I enjoy teaching (as a CS peer mentor), tinkering with backend logic, and combining data with design to deliver seamless user experiences.
-      </p>
-      <p>
-        Outside of tech, I’m curious about music, sustainability, and creative storytelling. Whether it’s debugging C or mentoring classmates, I love learning and growing with people.
-      </p>
+  <p>
+    Hello! I'm <strong>Garv Pundir</strong>, a junior at the University of Wisconsin–Madison pursuing a triple focus in Computer Science, Data Science, and Economics. I’m passionate about designing scalable systems and solving real-world problems through software.
+  </p>
+  <p>
+    I’ve contributed to research in AI and machine learning, built predictive models, and created frontend interfaces for IoT applications. While I’ve gained experience in various areas—from LLM training to object detection—I’m currently expanding my expertise in backend development and system design.
+  </p>
+  <p>
+    Outside the classroom, I serve as a peer mentor for CS354 (Machine Organization), helping students master topics like C programming, memory management, and assembly language. I enjoy working on collaborative projects, especially those that blend data, code, and impact.
+  </p>
+  <p>
+    I believe in continuous learning, whether it's through contributing to open-source projects or mentoring others. My goal is to create solutions that are both technically robust and user-centric.
+  </p>
     </div>
   );
 }
