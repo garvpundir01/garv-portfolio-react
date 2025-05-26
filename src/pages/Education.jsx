@@ -1,8 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 function Education() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div className="page">
+    <motion.div
+      className="page"
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
+      exit={{ opacity: 0, x: 40 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>Education</h1>
     <h2>University of Wisconsin–Madison</h2>
     <p><strong>BS in Computer Science, Data Science & Economics</strong></p>
@@ -21,7 +32,8 @@ function Education() {
       <li>Intermediate Macroeconomic Theory</li>
       <li>Introduction to Computer Engineering </li>
     </ul>
-    </div>
+
+    </motion.div>
   );
 }
 

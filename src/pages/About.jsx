@@ -1,8 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 function About() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div className="page">
+    <motion.div
+      className="page"
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
+      exit={{ opacity: 0, x: 40 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>About Me</h1>
   <p>
     Hello! I'm <strong>Garv Pundir</strong>, a junior at the University of Wisconsin–Madison pursuing a triple focus in Computer Science, Data Science, and Economics. I’m passionate about designing scalable systems and solving real-world problems through software.
@@ -16,7 +27,7 @@ function About() {
   <p>
     I believe in continuous learning, whether it's through contributing to open-source projects or mentoring others. My goal is to create solutions that are both technically robust and user-centric.
   </p>
-    </div>
+    </motion.div>
   );
 }
 

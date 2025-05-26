@@ -1,8 +1,19 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 function Experience() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+
   return (
-    <div className="page">
+    <motion.div
+      className="page"
+      ref={ref}
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
+      exit={{ opacity: 0, x: 40 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1>Work Experience</h1>
 
       <h2>🔧 Harmonizer Scientific Research – SDE Intern</h2>
@@ -22,7 +33,8 @@ function Experience() {
       <p>
         Developed and implemented an object detection system for self-driven cars using the YOLO (You Only Look Once) algorithm, leveraging Python and libraries such as scikit-learn and pandas. Applied machine learning techniques, including Linear and Logistic Regression, Neural Networks, and Classification, to optimize the model's accuracy and performance. Conducted data preprocessing, model training, and validation to ensure robustness under diverse conditions while collaborating with a team to integrate advanced computer vision techniques into autonomous systems.
       </p>
-    </div>
+
+    </motion.div>
   );
 }
 
