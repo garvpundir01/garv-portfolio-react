@@ -1,101 +1,156 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* src/App.css */
+/* === Base Reset === */
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f7fa;
-  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f5f5f5;
+  color: #1e1e1e;
 }
 
+/* === Dark Mode Body === */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* === Page Container === */
 .page {
   max-width: 900px;
   margin: 80px auto;
   padding: 2rem;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+/* Dark Mode Page */
+body.dark .page {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
 }
 
-h2 {
-  margin-top: 2rem;
-  color: #333;
+/* === Navbar === */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-ul {
-  padding-left: 1.2rem;
+/* Dark Navbar */
+body.dark .navbar {
+  background-color: #1a1a1a;
 }
 
-a {
-  color: #007acc;
+/* Navbar Title */
+.navbar h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* === Navbar Links === */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: white;
   text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  border-radius: 6px;
 }
 
-a:hover {
-  text-decoration: underline;
+.nav-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Dark Mode Nav Link Text */
+body.dark .nav-links li a {
+  color: #ddd;
+}
+
+/* === Action Buttons (Dark Toggle & Resume) === */
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.theme-toggle,
+.resume-btn {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.resume-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Colors in Dark Mode */
+body.dark .theme-toggle,
+body.dark .resume-btn {
+  border-color: #888;
+  color: #f5f5f5;
+}
+
+/* === Footer === */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+body.dark footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+}
+
+/* === Project Cards (optional for consistency) === */
 .project {
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
 }
 
-.project:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+body.dark .project {
+  background-color: #2a2a2a;
 }
 
-.project h2 {
-  margin-bottom: 0.5rem;
-}
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 
-.project p {
-  margin-bottom: 0.5rem;
+  .nav-actions {
+    margin-top: 1rem;
+  }
 }
