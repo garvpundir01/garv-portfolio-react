@@ -32,11 +32,13 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <AnimatedRoutes />
-      <Footer />
-    </Router>
+    <div className="app-layout">
+      <Router>
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

@@ -17,7 +17,7 @@ function Skills() {
       <h1>Skills</h1>
 
       <h3>Programming Languages</h3>
-      <p>JavaScript, Python, Java, C, C++, R</p>
+      <p>Java, Python, JavaScript, C, C++, R, SQL</p>
 
       <h3>Frontend & UI</h3>
       <p>HTML, CSS, React, Responsive Design, Git</p>
