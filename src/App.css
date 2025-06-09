@@ -242,3 +242,10 @@ body.dark .project {
   background-color: #0097a7;
 }
 
+.resilience-quote {
+  font-style: italic;
+  text-align: center;
+  color: #00bcd4;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}

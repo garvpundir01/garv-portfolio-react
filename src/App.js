@@ -12,6 +12,10 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
+import MyStory from './pages/MyStory';
+
+
+
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -23,6 +27,7 @@ function AnimatedRoutes() {
         <Route path="/education" element={<Education />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/my-story" element={<MyStory />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
