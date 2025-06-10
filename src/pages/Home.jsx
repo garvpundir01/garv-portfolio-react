@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import profilePic from '../assets/garv.jpg';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function Home() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });

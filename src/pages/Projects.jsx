@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 
 function Projects() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
