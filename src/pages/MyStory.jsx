@@ -12,7 +12,7 @@ function MyStory() {
       <h1>My Story</h1>
 
       <p>
-        In [Month Year], I experienced a life-changing car accident that left me severely injured. The recovery process was long and difficult, both physically and mentally — but it also became one of the most defining periods of my life.
+        In April 2023, I experienced a life-changing car accident that left me severely injured. The recovery process was long and difficult, both physically and mentally — but it also became one of the most defining periods of my life.
       </p>
 
       <p>

@@ -32,21 +32,11 @@ function Home() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <h1>👋 Hi, I'm Garv Pundir</h1>
-
           <p>
-            I'm <strong>Garv Pundir</strong>, a junior at the University of Wisconsin–Madison majoring in <strong>Computer Science</strong>, <strong>Data Science</strong>, and <strong>Economics</strong>. I’m passionate about solving real-world problems by building intelligent systems, designing scalable software, and delivering clean user experiences.
+            Computer Science, Data Science and Economics junior at UW–Madison passionate about backend software development, exploring AI, developing and utilizing LLMs.
           </p>
-
           <p>
-            My academic journey is driven by curiosity and a strong foundation in programming, systems, and data modeling. I’ve applied machine learning to stock price forecasting, built LSTM models for time-series prediction, and explored AI alignment by training LLMs to assess student writing. I’ve also developed interactive frontends for IoT systems and contributed to a research-backed project comparing ChatGPT to domain-specific scientific datasets.
-          </p>
-
-          <p>
-            Outside the classroom, I’m a <strong>CS354 Peer Mentor</strong>, helping students understand memory management, assembly language, and C programming. I enjoy mentoring, collaborating on open-source projects, and working at the intersection of backend development and data analysis.
-          </p>
-
-          <p>
-            I'm always looking for opportunities to contribute to impactful projects, learn from sharp people, and make tech more thoughtful and human-centered.
+            Learn more about my journey on the <Link to="/my-story">My Story</Link> page or see what I’ve been working on in <Link to="/projects">Projects</Link>.
           </p>
 
           <Link to="/about" className="learn-more-btn">Learn more →</Link>
