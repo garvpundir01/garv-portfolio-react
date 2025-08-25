@@ -19,16 +19,19 @@ function Skills() {
       <h1>Skills</h1>
 
       <h3>Programming Languages</h3>
-      <p>Java, Python, JavaScript, C, C++, R, SQL</p>
+      <p>Java, Python, JavaScript, C, C++, R, SQL, HTML/CSS</p>
 
-      <h3>Frontend & UI</h3>
-      <p>HTML, CSS, React, Responsive Design, Git</p>
+      <h3>Frameworks</h3>
+      <p>ReactJS, NodeJS, SQLite, Scikit Learn, Flask, JUnit, MySQL, NoSQL, FastAPI, TypeScript, Vite</p>
 
-      <h3>Data Science & ML</h3>
-      <p>NumPy, Pandas, Scikit-learn, LSTM, Matplotlib</p>
+      <h3>Data Modelling</h3>
+      <p>R, Python (matplotlib, pandas, NumPy), LSTM, Regression, Classification</p>
 
-      <h3>Tools & Platforms</h3>
-      <p>GitHub, VS Code, Jupyter, Linux, Web APIs</p>
+      <h3>Developer Tools</h3>
+      <p>Git, Agile Development, Visual Studio, Linux, Bash, Vim, Nano, IntelliJ</p>
+
+      <h3>Other Skills</h3>
+      <p>Data Structures, Algorithms, Front-end, Back-end, Full-stack, Artificial Intelligence, Database Management Systems</p>
 
     </motion.div>
   );

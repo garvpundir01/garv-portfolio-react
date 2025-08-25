@@ -21,13 +21,21 @@ function Experience() {
       <h2>🔧 Harmonizer Scientific Research – SDE Intern</h2>
       <p><em>Aug 2024 – Oct 2024</em></p>
       <p>
-        Designed and implemented interactive temperature and rain widgets for IoT devices using HTML, CSS, and JavaScript, enhancing the user experience and visualization capabilities. Collaborated with cross-functional teams to understand requirements and deliver responsive, user-friendly designs tailored to client specifications. Optimized widget performance, ensuring seamless functionality across multiple devices and platforms. Conducted testing and debugging to improve reliability and usability, addressing technical issues and incorporating feedback from stakeholders. Gained hands-on experience in front-end development while contributing to real-world IoT applications.
+        Contributed to front-end development using JavaScript, HTML, and CSS, collaborating with the engineering team to deliver features aligned with SDLC best practices and coding standards.
+
+        Optimized widget performance for IoT devices, enhancing cross-platform compatibility and improving UI responsiveness, resulting in a smoother user experience across multiple devices.
+
+        Strengthened skills in UI optimization, performance tuning, and collaborative software development within an agile, fast-paced environment.
       </p>
 
       <h2>👨‍🏫 UW–Madison – CS354 Peer Mentor</h2>
       <p><em>Jan 2025 – Present</em></p>
       <p>
-        As a peer mentor for the class <strong>Introduction to Computer Systems and C Programming</strong>, I support students in mastering foundational concepts such as virtual memory, dynamic memory management, caching, assembly language, and system-level communication. I provide guidance on C programming, debugging, and optimizing performance while fostering critical thinking and collaboration through study sessions. By creating an inclusive and supportive environment, I aim to encourage student engagement and understanding, serving as a bridge between students and the instructor to address challenges and enhance learning outcomes.
+        Mentored students on complex systems topics including virtual memory management, C programming, dynamic memory allocation, caching, assembly language, and system-level communication, breaking down abstract concepts into approachable steps.
+
+Led coding sessions on caching, memory allocation, and assembly, creating an interactive environment that encouraged collaboration and deeper technical understanding.
+
+Reinforced structured problem-solving techniques and best practices, helping students build confidence in debugging, system-level programming, and applying theory to practical coding challenges.
       </p>
 
       <h2>🧠 Inspirit AI – AI Intern (Remote)</h2>

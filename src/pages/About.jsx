@@ -18,7 +18,7 @@ function About() {
     >
       <h1>About Me</h1>
   <p>
-    Hello! I'm <strong>Garv Pundir</strong>, a junior at the University of Wisconsin–Madison pursuing a triple focus in Computer Science, Data Science, and Economics. I’m passionate about designing scalable systems and solving real-world problems through software.
+    Hello! I'm <strong>Garv Pundir</strong>, a junior at the University of Wisconsin–Madison pursuing a triple major in Computer Science, Data Science, and Economics. I’m passionate about designing scalable systems and solving real-world problems through software.
   </p>
   <p>
     I’ve contributed to research in AI and machine learning, built predictive models, and created frontend interfaces for IoT applications. While I’ve gained experience in various areas—from LLM training to object detection—I’m currently expanding my expertise in backend development and system design.

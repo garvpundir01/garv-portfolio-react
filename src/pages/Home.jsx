@@ -34,7 +34,7 @@ function Home() {
         >
           <h1>👋 Hi, I'm Garv Pundir</h1>
           <p>
-            Computer Science, Data Science and Economics junior at UW–Madison passionate about backend software development, exploring AI, developing and utilizing LLMs.
+            Computer Science, Data Science and Economics senior at UW–Madison passionate about backend software development, exploring AI, developing and utilizing LLMs.
           </p>
           <p>
             Learn more about my journey on the <Link to="/my-story">My Story</Link> page or see what I’ve been working on in <Link to="/projects">Projects</Link>.
