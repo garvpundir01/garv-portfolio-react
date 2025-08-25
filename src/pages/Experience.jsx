@@ -18,7 +18,7 @@ function Experience() {
     >
       <h1>Work Experience</h1>
 
-      <h2>🔧 Harmonizer Scientific Research – SDE Intern</h2>
+      <h2>🔧 Harmonizer Global – SDE Intern</h2>
       <p><em>Aug 2024 – Oct 2024</em></p>
       <p>
         Contributed to front-end development using JavaScript, HTML, and CSS, collaborating with the engineering team to deliver features aligned with SDLC best practices and coding standards.
