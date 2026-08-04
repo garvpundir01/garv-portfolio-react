@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Garv Pundir — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio site. React (Create React App) + React Router + Framer Motion, no UI framework.
 
-## Available Scripts
+## Running it
 
-In the project directory, you can run:
+```bash
+npm install
+npm start      # dev server on http://localhost:3000
+npm test       # smoke tests
+npm run build  # production bundle in build/
+```
 
-### `npm start`
+### A note on the Jest config
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`react-router-dom@7` ships an `exports` map and a `main` field pointing at a file it doesn't
+publish. Webpack resolves it fine; CRA's older Jest resolver doesn't. The `jest.moduleNameMapper`
+entries in `package.json` point both `react-router-dom` and `react-router/dom` straight at their
+real files. `src/setupTests.js` additionally polyfills `TextEncoder`/`TextDecoder` (react-router 7
+needs them) and stubs `matchMedia` + `IntersectionObserver` for jsdom. Remove these once the
+project moves off `react-scripts`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Editing content
 
-### `npm test`
+**All copy lives in [`src/content/site.js`](src/content/site.js).** Adding a job, a project, or a
+skill means editing that file — no JSX changes needed. The exports map to the page like this:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Export         | Where it renders                        |
+| -------------- | --------------------------------------- |
+| `profile`      | Hero, About aside, Contact, Footer      |
+| `highlights`   | Stats strip under the hero              |
+| `experience`   | Experience timeline                     |
+| `projects`     | Projects grid (`featured: true` shows by default; the rest sit behind "Show more") |
+| `publications` | Publications card                       |
+| `skills`       | Skills grid                             |
+| `education`    | Education card                          |
+| `story`        | `/my-story` page                        |
+| `navSections`  | Navbar + footer links, and scroll-spy   |
 
-### `npm run build`
+Keep the résumé PDF at `public/Garv_Pundir_Resume.pdf` — the download buttons point there.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+  content/site.js      all site copy
+  components/          Navbar, Footer, Section (reveal-on-scroll wrapper)
+  sections/            Hero, About, Experience, Projects, Skills, Education, Contact
+  pages/               Home (composes the sections), MyStory
+  index.css            design tokens + reset + light/dark themes
+  App.css              component styles
+  ThemeContext.js      theme state, persisted only on explicit toggle
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The site is one scrolling page at `/`, plus `/my-story`. The old per-page routes
+(`/about`, `/projects`, …) redirect to their section anchors.
 
-### `npm run eject`
+## Deploying
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The site uses client-side routing, so the host **must** serve `index.html` for unknown paths or
+`/my-story` will 404 on a hard refresh. That's already configured:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Netlify / Cloudflare Pages** — `public/_redirects`
+- **Vercel** — `vercel.json`
+- **GitHub Pages** — no rewrite support; add a `homepage` field to `package.json` and copy
+  `build/index.html` to `build/404.html` after building.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Before going live, replace the placeholder `https://garvpundir.com/` with the real origin in
+`public/index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`), `public/robots.txt`,
+and `public/sitemap.xml`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Images and icons
 
-## Learn More
+- `src/assets/garv.jpg` is the untouched original. `src/assets/portrait.jpg` is the 520×520
+  re-encode the hero actually imports (~30 kB vs ~125 kB).
+- `public/favicon.svg` is the source of truth for branding. `favicon.ico`, `logo192.png`,
+  `logo512.png`, and `apple-touch-icon.png` were rendered from it — regenerate them if the SVG
+  changes.
+- `public/og-image.jpg` is a composed 1200×630 social card, not a raw photo crop.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Accessibility
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Audited with axe-core: zero violations on `/` and `/my-story` in both themes. The `--text-faint`
+token is pinned to values that clear WCAG AA (4.5:1) for small text against both surface colors —
+if you darken it, re-check the contrast. Motion respects `prefers-reduced-motion` via both the CSS
+rule in `index.css` and `<MotionConfig reducedMotion="user">` in `App.js` (the CSS alone cannot
+stop framer-motion's JS-driven animations).
 
-### Code Splitting
+## Theming
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Colors, spacing, type scale, and radii are CSS custom properties in `src/index.css`, defined once
+for `[data-theme='dark']` (the default) and once for `[data-theme='light']`. To restyle the site,
+change the tokens — not the components. First paint is set by an inline script in
+`public/index.html` so there's no theme flash on load.

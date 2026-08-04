@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Garv Pundir",
+  "name": "Garv Pundir — Software & AI/ML Engineer",
+  "description": "Portfolio of Garv Pundir — CS, Data Science, and Economics at UW–Madison.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0a0b0d",
+  "background_color": "#0a0b0d"
 }
