@@ -65,9 +65,9 @@ The site uses client-side routing, so the host **must** serve `index.html` for u
 - **GitHub Pages** — no rewrite support; add a `homepage` field to `package.json` and copy
   `build/index.html` to `build/404.html` after building.
 
-Before going live, replace the placeholder `https://garvpundir.com/` with the real origin in
+Live at **https://garv-portfolio-react.vercel.app/** (Vercel). That origin is hardcoded in
 `public/index.html` (`canonical`, `og:url`, `og:image`, `twitter:image`), `public/robots.txt`,
-and `public/sitemap.xml`.
+and `public/sitemap.xml` — update all three if the domain ever changes.
 
 ## Images and icons
 

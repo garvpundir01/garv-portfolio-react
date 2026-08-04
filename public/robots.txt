@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://garvpundir.com/sitemap.xml
+Sitemap: https://garv-portfolio-react.vercel.app/sitemap.xml
